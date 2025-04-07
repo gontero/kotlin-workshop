@@ -11,16 +11,19 @@ interface SessionInfoProvider {
 
 abstract class AbstractBasicInfoProvider: PersonInfoProvider
 
-class BasicInfoProvider: PersonInfoProvider, SessionInfoProvider {
+open class BasicInfoProvider: PersonInfoProvider, SessionInfoProvider { // default class is final, so we need to use open keyword
     override val providerInfo: String
         get() = "BasicInfoProvider"
+
+    protected open val sessionIdPrefix = "Session" // it need open to override in child class
+
     override fun printInfo(person: Person) { // need of override keyword
         super.printInfo(person)
         println("Person Info: ${person.firstName} ${person.lastName}")
     }
 
     override fun getSessionId(): String {
-        return "sessionId"
+        return sessionIdPrefix
     }
 }
 
