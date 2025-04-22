@@ -1,4 +1,4 @@
-
+package basic
 interface IdProvider{
     fun getId(): String
 }
@@ -14,7 +14,7 @@ class Entity private constructor(val id: String){
 }
 
 fun main() {
-    val entity = Entity.Factory.create()
+    val entity = Entity.create()
     val entity2 = Entity.create()
     println(Entity.id)
     println(entity.id)

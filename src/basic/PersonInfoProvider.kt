@@ -1,3 +1,5 @@
+package basic
+
 interface PersonInfoProvider {
     val providerInfo: String
     fun printInfo(person: Person) {
@@ -34,7 +36,7 @@ fun main() {
     checkType(provider)
 }
 
-fun checkType(infoProvider:PersonInfoProvider) {
+fun checkType(infoProvider: PersonInfoProvider) {
     if (infoProvider is SessionInfoProvider){
         (infoProvider as SessionInfoProvider).getSessionId() // casting not needed if we use smart cast
         println("is a session info provider with session ${infoProvider.getSessionId()}")

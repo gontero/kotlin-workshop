@@ -1,3 +1,5 @@
+package basic
+
 // top level variable
 val name = "Gregory"
 // var greeting: String = null will not compile

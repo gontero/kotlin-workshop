@@ -1,3 +1,5 @@
+package basic
+
 fun main() {
     // val provider = AbstractBasicInfoProvider()
     val provider = object : PersonInfoProvider {

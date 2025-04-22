@@ -1,3 +1,5 @@
+package basic
+
 class FancyInfoProvider : BasicInfoProvider() {
 
     override val sessionIdPrefix: String

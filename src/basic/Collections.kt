@@ -1,3 +1,5 @@
+package basic
+
 fun learnArray() {
     println("--- immutable list ---")
     val immutableList = arrayOf("Kotlin", "programing", "comic") // or listOf("Kotlin", "programing", "comic") immutable
