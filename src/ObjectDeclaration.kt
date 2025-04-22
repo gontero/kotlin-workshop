@@ -2,7 +2,7 @@ import java.util.UUID
 
 
 enum class EntityType {
-    EASY, MEDIUM, HARD;
+    EASY, MEDIUM, HARD, HELP;
 
     fun getFormattedName(): String {
         return name.lowercase().replaceFirstChar { it.uppercaseChar() }
@@ -16,6 +16,7 @@ object EntityFactory {
             EntityType.EASY -> type.name
             EntityType.MEDIUM -> type.getFormattedName()
             EntityType.HARD -> "hard"
+            EntityType.HELP -> "help"
         }
         return ObjectDeclarationEntity(id, name)
     }
